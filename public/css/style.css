@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+
+:root {
+  --red-color: #ed0136;
+  --grey-color: #e1e1e1;
+  --white-color: #fff;
+  --blue-color: #007bff;
+  --dark-blue-color: #0056b3;
+  --input-color: #ad0b01;
+}
+
+a {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--dark-blue-color);
+  text-decoration: underline;
+}
+
+label.error {
+  color: var(--red-color) !important;
+  font-weight: bold !important;
+  font-size: 0.8rem !important;
+  line-height: 2 !important;
+  position: relative !important;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+#kvkk-error {
+  position: absolute !important;
+  bottom: -18px;
+  left: 0;
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 999;
+  background-color: #d11508;
+}
+
+.form {
+  padding: 3.1rem 15.8rem;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--white-color);
+}
+
+@media screen and (max-width: 992px) {
+  .form {
+    padding: 1rem;
+  }
+}
+
+.form .form-wrapper {
+  width: 100%;
+  max-width: 63rem;
+  border: 1px solid var(--red-color);
+  margin-top: 1.2rem;
+  padding: 3.7rem 3.1rem;
+}
+
+@media screen and (max-width: 576px) {
+  .form .form-wrapper {
+    padding: 2rem 1rem;
+  }
+}
+
+.form .form-wrapper .form-group {
+  margin-bottom: 2.8rem;
+  position: relative;
+}
+
+@media screen and (max-width: 576px) {
+  .form .form-wrapper .form-group {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form .form-wrapper .form-group .form-control {
+  border: none;
+  padding: 0;
+  border-bottom: 1px solid var(--input-color);
+  border-radius: 0rem;
+  font-size: 14px;
+}
+
+.form .form-wrapper .form-group .form-control:focus,
+.form .form-wrapper .form-group .form-select:focus,
+.form .form-wrapper .form-group textarea:focus,
+.form .form-wrapper .form-group button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 1px solid var(--input-color);
+}
+
+.form .form-wrapper .form-group .form-control {
+  padding-bottom: 0.6rem;
+}
+
+.form .form-wrapper .form-group .form-control:focus ~ .form-label,
+.form .form-wrapper .form-group .form-control:valid ~ .form-label {
+  top: -1.3rem;
+  left: 0;
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.form .form-wrapper .form-group .form-label {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  font-size: 14px;
+  color: #333;
+}
+
+.form .form-wrapper .form-group .form-select {
+  border: none;
+  padding: 0;
+  border-bottom: 1px solid var(--input-color);
+  border-radius: 0rem;
+  font-size: 14px;
+  padding-bottom: 0.6rem;
+}
+
+.form .form-wrapper .kvkk-wrapper {
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+
+.form .form-wrapper .kvkk-wrapper label {
+  margin-left: 0.4rem;
+}
+
+@media screen and (max-width: 576px) {
+  .form .form-wrapper .kvkk-wrapper label {
+    font-size: 0.8rem;
+  }
+}
+
+.form .form-wrapper .button-group {
+  margin-top: 1rem;
+}
+
+.form .form-wrapper .button-group button {
+  background-color: var(--red-color);
+  border: 1px solid var(--grey-color);
+  color: var(--grey-color);
+  width: 100%;
+}
+
+.form .form-wrapper .button-group button:hover {
+  background-color: var(--white-color);
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+}
+
+.form .modal-footer button {
+  background-color: var(--red-color);
+  border: 1px solid var(--grey-color);
+  color: var(--grey-color);
+  width: 100%;
+  width: inherit;
+}
+
+.form .modal-footer button:hover {
+  background-color: var(--white-color);
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  border: 1px solid var(--red-color);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
